@@ -1,4 +1,3 @@
-
 type Odber = {
     cas: number,
     spotreba: number 
@@ -17,7 +16,7 @@ const cena: number = 6.70;
 
 for (let i = 0; i < data.length; i++) {
     let cenaFinal = Math.round(data[i].spotreba / 1000 * (data[i].cas / 3600) * cena);
-    prumer += cenaFinal;
+    prumer += data[i].spotreba / 1000;
 
     console.log(
         "Spotřeba: " + data[i].spotreba + " W" +
@@ -28,5 +27,5 @@ for (let i = 0; i < data.length; i++) {
     );
 }
 
-console.log("Průměrná cena: " + prumer / data.length + " Kč")
+console.log("Průměrná spotřeba: " + prumer / data.length + " kWh")
 
